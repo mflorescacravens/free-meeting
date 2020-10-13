@@ -2,6 +2,14 @@ import React from 'react';
 import './App.css';
 
 function App() {
+  const meetingTimes = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+  var personMeetings = [];
+  
+
+  function addTimes(e) {
+    
+  }
+
   function addEmployee() {
     if (document.getElementById("employeeName").value !== "") {
       var nodeValue = document.getElementById("employeeName").value
@@ -11,15 +19,14 @@ function App() {
       document.getElementById("employeeList").appendChild(node);
       node.classList.add("list")
       var buttonNode = document.createElement("button");
+      // buttonNode
       var buttonText = document.createTextNode("+");
       buttonNode.appendChild(buttonText)
       node.appendChild(buttonNode)
+      node.onclick = addTimes
     }
   }
 
-  function addTimes(e) {
-    
-  }
 
   return (
     <div className="App">
